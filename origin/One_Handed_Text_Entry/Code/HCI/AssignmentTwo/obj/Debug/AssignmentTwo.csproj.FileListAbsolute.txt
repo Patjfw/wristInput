@@ -1,0 +1,63 @@
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\bin\Debug\AssignmentTwo.exe.config
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\bin\Debug\AssignmentTwo.exe
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\bin\Debug\AssignmentTwo.pdb
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\AssignmentTwo.csprojResolveAssemblyReference.cache
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\MainWindow.g.cs
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\App.g.cs
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\AssignmentTwo_MarkupCompile.cache
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\AssignmentTwo_MarkupCompile.lref
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\MainWindow.baml
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\AssignmentTwo.g.resources
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\AssignmentTwo.Properties.Resources.resources
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\AssignmentTwo.csproj.GenerateResource.Cache
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\AssignmentTwo.exe
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\AssignmentTwo.pdb
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\Part1.g.cs
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\Part3.g.cs
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\Part1.baml
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\Part3.baml
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\UserStudy.g.cs
+C:\Users\junge\Google Drive\HCI homework\AssignmentTwo\AssignmentTwo\obj\Debug\UserStudy.baml
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\bin\Debug\AssignmentTwo.exe.config
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\bin\Debug\AssignmentTwo.exe
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\bin\Debug\AssignmentTwo.pdb
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.csprojResolveAssemblyReference.cache
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\MainWindow.g.cs
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\Part1.g.cs
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\Part3.g.cs
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\UserStudy.g.cs
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\App.g.cs
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo_MarkupCompile.cache
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo_MarkupCompile.lref
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\MainWindow.baml
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\Part1.baml
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\Part3.baml
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\UserStudy.baml
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.g.resources
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.Properties.Resources.resources
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.csproj.GenerateResource.Cache
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.exe
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.pdb
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\bin\Debug\AssignmentTwo.exe.config
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\bin\Debug\AssignmentTwo.exe
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\bin\Debug\AssignmentTwo.pdb
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.csprojResolveAssemblyReference.cache
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\MainWindow.g.cs
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\Part1.g.cs
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\Part3.g.cs
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\UserStudy.g.cs
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\App.g.cs
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo_MarkupCompile.cache
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo_MarkupCompile.lref
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\MainWindow.baml
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\Part1.baml
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\Part3.baml
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\UserStudy.baml
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.g.resources
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.Properties.Resources.resources
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.csproj.GenerateResource.Cache
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.exe
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\HCI\AssignmentTwo\obj\Debug\AssignmentTwo.pdb

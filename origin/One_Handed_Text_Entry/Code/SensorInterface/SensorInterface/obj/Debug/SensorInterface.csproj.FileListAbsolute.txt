@@ -1,0 +1,177 @@
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\App.g.cs
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterface\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\App.g.cs
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\App.g.cs
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\Jun Gong\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\App.g.cs
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\jungeorge\Desktop\Projects\InterfaceProject\SensorInterfacev4.0\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\App.g.cs
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\junge\Google Drive\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\junge\Google Drive\SensorInterface16\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\junge\Google Drive\SensorInterface16\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\junge\Google Drive\SensorInterface16\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\App.g.cs
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\junge\Google Drive\SensorInterface16 - Copy\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\App.g.cs
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\junge\Google Drive\SensorInterface12\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\App.g.cs
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\junge\Google Drive\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\App.g.cs
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\jungeorge\Google 云端硬盘\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\App.g.cs
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\junge\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\Jun Gong\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\Jun Gong\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\Jun Gong\Dropbox\WristWhirl\Code\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\SensorInterface12_Revised\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\SensorInterface12_Revised\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\App.g.cs
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\junge\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.pdb
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe.config
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\bin\Debug\SensorInterface.exe
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\bin\Debug\SensorInterface.pdb
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csprojResolveAssemblyReference.cache
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\MainWindow.g.cs
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\App.g.cs
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.cache
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface_MarkupCompile.lref
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\MainWindow.baml
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.g.resources
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.Properties.Resources.resources
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.csproj.GenerateResource.Cache
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.exe
+C:\Users\FW_XPS\Dropbox\One_Handed_Text_Entry\Code\SensorInterface\SensorInterface\obj\Debug\SensorInterface.pdb

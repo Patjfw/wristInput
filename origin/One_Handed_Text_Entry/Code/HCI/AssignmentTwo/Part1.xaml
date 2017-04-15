@@ -1,0 +1,33 @@
+﻿<Window x:Class="AssignmentTwo.Part1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AssignmentTwo"
+        mc:Ignorable="d"
+        Title="Part1" Height="520.3" Width="488.318">
+    <Grid Margin="0,0,45,6.333">
+
+        <Label x:Name="subjectid" Content="Subject ID:" HorizontalAlignment="Left" Margin="27,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.173,-0.006"/>
+        <Label x:Name="trials" Content="Trials per condition:" HorizontalAlignment="Left" Margin="27,85,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="amplitude" Content="Amplitudes: (pixels)&#xA;(1-300)" HorizontalAlignment="Left" Margin="27,124,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="width" Content="Widths: (pixels)&#xA;(1-50)" HorizontalAlignment="Left" Margin="160,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.742,0.477"/>
+        <Label x:Name="difficultylabel" Content="Indices of Difficulty&#xD;&#xA;(0 unique):" HorizontalAlignment="Left" Margin="293,147,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.094" Height="46"/>
+        <ListBox x:Name="amplistBox" HorizontalAlignment="Left" Height="165" Margin="27,190,0,0"  VerticalAlignment="Top" Width="113" SelectionChanged="amplistBox_SelectionChanged" />
+        <ListBox x:Name="widlistBox" HorizontalAlignment="Left" Height="165" Margin="155,190,0,0"  VerticalAlignment="Top" Width="120" SelectionChanged="widlistBox_SelectionChanged"/>
+        <ListBox x:Name="difflistBox" HorizontalAlignment="Left" Height="165" Margin="293,190,0,0"  VerticalAlignment="Top" Width="120" />
+        <Label x:Name="totaltrials" Content="Total Trials: 0" HorizontalAlignment="Left" Margin="27,363,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="okbutton" Content="Ok" HorizontalAlignment="Left" Margin="200,377,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.344,0.737" Click="okbutton_Click"/>
+        <Button x:Name="cancelbutton" Content="Cancel" HorizontalAlignment="Left" Margin="293,377,0,0" VerticalAlignment="Top" Width="75" Click="cancelbutton_Click"/>
+        <xctk:IntegerUpDown x:Name="TrialsUD" Value="1" Increment="1" Maximum="100000" Minimum="1" Margin="154,89,215.333,366.334" ValueChanged="TrialsUD_ValueChanged" />
+        <xctk:IntegerUpDown x:Name="AmplitudesUD" Value="150" Increment="1" Maximum="300" Minimum="1" Margin="32,166,339.333,289.334" />
+        <xctk:IntegerUpDown x:Name="WidthsUD" Value = "10" Maximum="50" Minimum="1" Margin="160,166,211.333,289.334" />
+        <xctk:IntegerUpDown x:Name ="SubjectUD" Value="1" Increment="1" Maximum="100000" Minimum="1" Margin="103,37,268.333,418.334" />
+        <Button x:Name="ampplus" Content="+" HorizontalAlignment="Left" Margin="103,168,0,0" VerticalAlignment="Top" Width="17" Click="ampplus_Click"/>
+        <Button x:Name="ampminus" Content="-" HorizontalAlignment="Left" Margin="123,168,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.745,0.65" Click="ampminus_Click"/>
+        <Button x:Name="widplus" Content="+" HorizontalAlignment="Left" Margin="236,168,0,0" VerticalAlignment="Top" Width="17" Click="widplus_Click"/>
+        <Button x:Name="widminus" Content="-" HorizontalAlignment="Left" Margin="258,168,0,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="0.745,0.65" Click="widminus_Click"/>
+
+    </Grid>
+</Window>
