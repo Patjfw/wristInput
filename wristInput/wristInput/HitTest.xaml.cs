@@ -19,26 +19,30 @@ namespace AssignmentTwo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HitTest : Window
     {
-        public MainWindow()
+        public HitTest()
         {
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void toggleTest(object sender, RoutedEventArgs e)
         {
-            Part1 partonewindow = new Part1();
-            partonewindow.Show();
-            this.Close();
+            Button btn = (Button)sender;
+            if (btn.Content.Equals("Start"))
+            {
+                btn.Content = "End";
+            }
+            else {
+                btn.Content = "Start";
+            }
         }
 
-        /*private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            Part3 partthreewindow = new Part3();
-            partthreewindow.Show();
+        private void recalibrate(object sender, RoutedEventArgs e) {
+            Calibration calibration = new Calibration();
+            calibration.Show();
             this.Close();
-        }*/
+        }
 
 
     }

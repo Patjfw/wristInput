@@ -108,8 +108,10 @@ namespace AssignmentTwo
         //ok button
         private void okbutton_Click(object sender, RoutedEventArgs e)
         {
-            UserStudy userstudy = new UserStudy(this.amplitudelist,this.widlist,this.numtrials, Int32.Parse(this.TrialsUD.Value.ToString()), Int32.Parse(this.SubjectUD.Value.ToString()));
-            userstudy.Show();
+            //UserStudy userstudy = new UserStudy(this.amplitudelist,this.widlist,this.numtrials, Int32.Parse(this.TrialsUD.Value.ToString()), Int32.Parse(this.SubjectUD.Value.ToString()));
+            //userstudy.Show();
+            Calibration calibration = new Calibration();
+            calibration.Show();
             this.Close();
         }
 
