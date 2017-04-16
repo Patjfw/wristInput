@@ -58,12 +58,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Calibration.xaml.cs">
+      <DependentUpon>Calibration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Doughnut.cs" />
+    <Compile Include="HitTest.xaml.cs">
+      <DependentUpon>HitTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OneEuroFilter.cs" />
     <Compile Include="Part1.xaml.cs">
       <DependentUpon>Part1.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserStudy.xaml.cs">
       <DependentUpon>UserStudy.xaml</DependentUpon>
     </Compile>
+    <Page Include="Calibration.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HitTest.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

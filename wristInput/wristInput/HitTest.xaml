@@ -1,0 +1,13 @@
+﻿<Window x:Class="AssignmentTwo.HitTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AssignmentTwo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="600">
+    <Grid>
+        <Button x:Name="togBtn" Content="Start" HorizontalAlignment="Left" Margin="75,75,0,0" VerticalAlignment="Top" Width="150" Click="toggleTest" Height="33"/>
+        <Button x:Name="calibrateBtn" Content="Calibrate" HorizontalAlignment="Left" Margin="75,150,0,0" VerticalAlignment="Top" Width="150" Click="recalibrate" Height="33"/>
+    </Grid>
+</Window>
