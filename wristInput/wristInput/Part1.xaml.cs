@@ -88,21 +88,21 @@ namespace AssignmentTwo
             //update the difficulty
             amplitudelist = amplistBox.Items.OfType<string>().ToList();
             widlist = widlistBox.Items.OfType<string>().ToList();
-            if(amplitudelist.Count > 0 && widlist.Count > 0) {
-                for (int i = 0; i < amplitudelist.Count; i++)
-                {
-                    for (int j = 0; j < widlist.Count; j++)
-                    {
-                        double diff = Math.Log(2.0 * Int32.Parse(amplitudelist[i]) / Int32.Parse(widlist[j]), 2);
-                        difficulty.Add(diff.ToString("0.00"));
-                    }
-                }
-                difficulty = difficulty.Distinct().ToList();
-                difficulty.Sort();
-                this.difflistBox.ItemsSource = difficulty;
-                //update the difficulty label
-                this.difficultylabel.Content = "Indices of Difficulty\n(" + difficulty.Count + " unique):";
-            }
+            //if(amplitudelist.Count > 0 && widlist.Count > 0) {
+            //    for (int i = 0; i < amplitudelist.Count; i++)
+            //    {
+            //        for (int j = 0; j < widlist.Count; j++)
+            //        {
+            //            double diff = Math.Log(2.0 * Int32.Parse(amplitudelist[i]) / Int32.Parse(widlist[j]), 2);
+            //            difficulty.Add(diff.ToString("0.00"));
+            //        }
+            //    }
+            //    difficulty = difficulty.Distinct().ToList();
+            //    difficulty.Sort();
+            //    this.difflistBox.ItemsSource = difficulty;
+            //    //update the difficulty label
+            //    this.difficultylabel.Content = "Indices of Difficulty\n(" + difficulty.Count + " unique):";
+            //}
         }
 
         //ok button
