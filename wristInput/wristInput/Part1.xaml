@@ -13,10 +13,8 @@
         <Label x:Name="trials" Content="Trials per condition:" HorizontalAlignment="Left" Margin="27,85,0,0" VerticalAlignment="Top"/>
         <Label x:Name="amplitude" Content="Amplitudes: (pixels)&#xA;(1-300)" HorizontalAlignment="Left" Margin="27,124,0,0" VerticalAlignment="Top"/>
         <Label x:Name="width" Content="Widths: (pixels)&#xA;(1-50)" HorizontalAlignment="Left" Margin="160,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.742,0.477"/>
-        <Label x:Name="difficultylabel" Content="Indices of Difficulty&#xD;&#xA;(0 unique):" HorizontalAlignment="Left" Margin="293,147,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.531,0.094" Height="46"/>
         <ListBox x:Name="amplistBox" HorizontalAlignment="Left" Height="165" Margin="27,190,0,0"  VerticalAlignment="Top" Width="113" SelectionChanged="amplistBox_SelectionChanged" />
         <ListBox x:Name="widlistBox" HorizontalAlignment="Left" Height="165" Margin="155,190,0,0"  VerticalAlignment="Top" Width="120" SelectionChanged="widlistBox_SelectionChanged"/>
-        <ListBox x:Name="difflistBox" HorizontalAlignment="Left" Height="165" Margin="293,190,0,0"  VerticalAlignment="Top" Width="120" />
         <Label x:Name="totaltrials" Content="Total Trials: 0" HorizontalAlignment="Left" Margin="27,363,0,0" VerticalAlignment="Top"/>
         <Button x:Name="okbutton" Content="Ok" HorizontalAlignment="Left" Margin="200,377,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.344,0.737" Click="okbutton_Click"/>
         <Button x:Name="cancelbutton" Content="Cancel" HorizontalAlignment="Left" Margin="293,377,0,0" VerticalAlignment="Top" Width="75" Click="cancelbutton_Click"/>
