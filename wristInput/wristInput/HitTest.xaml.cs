@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,9 +22,19 @@ namespace AssignmentTwo
     /// </summary>
     public partial class HitTest : Window
     {
-        public HitTest()
+        int count;
+        string fileName;
+
+        int testCount = 0;
+        List<string> tests;
+
+        public HitTest(int serialNum, string fileName)
         {
             InitializeComponent();
+            this.count = serialNum;
+            this.fileName = fileName;
+            tests = readFromRecordFile(this.count);
+            drawShape(testCount);
         }
 
         private void toggleTest(object sender, RoutedEventArgs e)
@@ -32,18 +43,50 @@ namespace AssignmentTwo
             if (btn.Content.Equals("Start"))
             {
                 btn.Content = "End";
+                drawShape(testCount);
             }
-            else {
+            else
+            {
                 btn.Content = "Start";
             }
         }
 
-        private void recalibrate(object sender, RoutedEventArgs e) {
-            Calibration calibration = new Calibration();
+        private void recalibrate(object sender, RoutedEventArgs e)
+        {
+            Calibration calibration = new Calibration(this.count, this.fileName);
             calibration.Show();
             this.Close();
         }
 
+        private List<string> readFromRecordFile(int count)
+        {
+            string line;
+            int fileCount = 0;
+            System.IO.StreamReader stream = OpenFile();
+            List<string> result = new List<string>();
+            
+            while ((line = stream.ReadLine()) != null)
+            {
+                //System.Windows.MessageBox.Show(line);
+                if (fileCount >= count+1) {
+                    int secondSpace = line.IndexOf(' ', line.IndexOf(' ') + 1);
+                    result.Add(line.Substring(secondSpace+1));
+                }
+                fileCount++;
+            }
+            
+            return result;
+        }
 
+        private System.IO.StreamReader OpenFile() {
+            string path = Directory.GetCurrentDirectory()+"\\";
+            System.IO.StreamReader file = new System.IO.StreamReader(path + this.fileName);
+            return file;
+        }
+
+        private void drawShape(int count) {
+            String[] ShapeParam = this.tests[count].Split(' ');
+            Console.Write(ShapeParam);
+        }
     }
 }
