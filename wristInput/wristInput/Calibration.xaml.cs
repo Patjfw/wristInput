@@ -62,9 +62,14 @@ namespace AssignmentTwo
         //two edge sensors are close then we pick middle three
         double pickthreethreshold = 50.0;
 
-        public Calibration()
+        int serialNum;
+        string recordFileName;
+
+        public Calibration(int serialNum, string fileName)
         { 
             InitializeComponent();
+            this.serialNum = serialNum;
+            this.recordFileName = fileName;
             arduino_data__buffer = new Queue<string>();
 
             serialport = new SerialPort();
@@ -144,7 +149,7 @@ namespace AssignmentTwo
             List<Doughnut> Doughnutlist = new List<Doughnut>();
             for (int i = 1; i <= numofDonuts; i++)
             {
-                Doughnut myDonut = new Doughnut((i - 1) * 360.0 / numofDonuts, i * 360.0 / numofDonuts);
+                Doughnut myDonut = new Doughnut((i - 1) * 360.0 / numofDonuts, i * 360.0 / numofDonuts, 20);
                 myDonut.SetValue(Canvas.LeftProperty, (double)150);
                 myDonut.SetValue(Canvas.TopProperty, (double)100);
                 mycanvas.Children.Add(myDonut);
@@ -854,7 +859,7 @@ namespace AssignmentTwo
 
         void finish_Click(object sender, RoutedEventArgs e)
         {
-            HitTest hitTest = new HitTest();
+            HitTest hitTest = new HitTest(this.serialNum, this.recordFileName);
             hitTest.Show();
             this.Close();
         }

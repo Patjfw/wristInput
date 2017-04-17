@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,8 @@ namespace AssignmentTwo
         public List<string> widlist = new List<string>();
         public List<string> difficulty = new List<string>();
         public int numtrials;
+        private string recordFileName;
+        Random r = new Random();
 
         public Part1()
         {
@@ -110,7 +113,8 @@ namespace AssignmentTwo
         {
             //UserStudy userstudy = new UserStudy(this.amplitudelist,this.widlist,this.numtrials, Int32.Parse(this.TrialsUD.Value.ToString()), Int32.Parse(this.SubjectUD.Value.ToString()));
             //userstudy.Show();
-            Calibration calibration = new Calibration();
+            writeTestFile(this.amplitudelist, this.widlist, this.numtrials, Int32.Parse(this.TrialsUD.Value.ToString()), Int32.Parse(this.SubjectUD.Value.ToString()));
+            Calibration calibration = new Calibration(0, this.recordFileName);
             calibration.Show();
             this.Close();
         }
@@ -119,6 +123,67 @@ namespace AssignmentTwo
         private void cancelbutton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void writeTestFile(List<string> degrees, List<string> heights, int numtrails, int tID, int sID)
+        {
+            string fileName = "testrecord_" + DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".txt";
+            this.recordFileName = fileName;
+            if (!File.Exists(fileName))
+            {
+                StreamWriter filewriter = File.CreateText(fileName);
+             
+                //blockNum: the plate divides into 8 parts, centerPos: the center of the segment locates on which degree
+                filewriter.WriteLine("SubjectID TrialNum degree height blockNum centerPos");
+                List<string> permutation = createPermutation(degrees, heights, Int32.Parse(this.TrialsUD.Value.ToString()));
+                for(int i=0; i<permutation.Count; i++)
+                {
+                    
+                    filewriter.WriteLine(sID + " " + i + " " + permutation[i]);
+                }
+                filewriter.Close();
+            }
+            else
+            {
+                MessageBox.Show("record_already_exists");
+            }
+        }
+
+        private List<string> createPermutation(List<string> degrees, List<string> heights, int repeat) {
+            List<string> result = new List<string>();
+            for (int i = 0; i < degrees.Count; i++) {
+                for(int j=0; j < heights.Count; j++)
+                {
+                    for (int k = 0; k < 8; k++)
+                    {
+                        for (int h=0; h< repeat; h++)
+                        {
+                            string tmp = degrees[i] + " " + heights[j] + " " + k +" " + generateCenterPos(this.r,k);
+                            result.Add(tmp);
+                        }
+                    }
+                }
+            }
+
+            //Fisher-Yates shuffle
+            Random rng = new Random();
+            int n = result.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rng.Next(n + 1);
+                string value = result[k];
+                result[k] = result[n];
+                result[n] = value;
+            }
+            
+            return result;
+        }
+
+        private double generateCenterPos(Random r, int blockNum) {
+            int range = 45;
+            double rDouble = r.NextDouble() * range;
+            return -22.5 + 45 * blockNum + rDouble;
         }
 
     }
