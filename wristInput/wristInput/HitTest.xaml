@@ -6,8 +6,4 @@
         xmlns:local="clr-namespace:AssignmentTwo"
         mc:Ignorable="d"
         Title="MainWindow" Height="400" Width="600">
-    <Grid>
-        <Button x:Name="togBtn" Content="Start" HorizontalAlignment="Left" Margin="75,75,0,0" VerticalAlignment="Top" Width="150" Click="toggleTest" Height="33"/>
-        <Button x:Name="calibrateBtn" Content="Calibrate" HorizontalAlignment="Left" Margin="75,150,0,0" VerticalAlignment="Top" Width="150" Click="recalibrate" Height="33"/>
-    </Grid>
 </Window>

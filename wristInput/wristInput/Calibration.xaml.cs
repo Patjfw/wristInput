@@ -149,7 +149,7 @@ namespace AssignmentTwo
             List<Doughnut> Doughnutlist = new List<Doughnut>();
             for (int i = 1; i <= numofDonuts; i++)
             {
-                Doughnut myDonut = new Doughnut((i - 1) * 360.0 / numofDonuts, i * 360.0 / numofDonuts);
+                Doughnut myDonut = new Doughnut((i - 1) * 360.0 / numofDonuts, i * 360.0 / numofDonuts, 20);
                 myDonut.SetValue(Canvas.LeftProperty, (double)150);
                 myDonut.SetValue(Canvas.TopProperty, (double)100);
                 mycanvas.Children.Add(myDonut);
