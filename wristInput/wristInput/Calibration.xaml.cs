@@ -68,7 +68,7 @@ namespace AssignmentTwo
             arduino_data__buffer = new Queue<string>();
 
             serialport = new SerialPort();
-            serialport.PortName = "COM4";
+            serialport.PortName = "COM5";
             serialport.BaudRate = 9600;
             serialport.Open(); //uncomment this line to receive data from serialport
             run_arduino_thread = true;
