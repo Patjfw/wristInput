@@ -15,14 +15,15 @@ namespace AssignmentTwo
         public double start_angle;
         public double stop_angle;
 
-        public Doughnut(double start_angle, double stop_angle)
+        public Doughnut(double start_angle, double stop_angle, double inner_width)
         {
             // Input two variables
             this.start_angle = start_angle;
             this.stop_angle = stop_angle;
+            this.inner_width = inner_width;
 
             // Define some constant parameters
-            inner_width = 20;
+            //inner_width = 40;
             Height = 150;
             Width = 150;
             Stroke = new SolidColorBrush(Colors.White);

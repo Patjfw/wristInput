@@ -26,6 +26,7 @@ namespace AssignmentTwo
         public List<string> difficulty = new List<string>();
         public int numtrials;
         private string recordFileName;
+        Random r = new Random();
 
         public Part1()
         {
@@ -134,11 +135,11 @@ namespace AssignmentTwo
              
                 //blockNum: the plate divides into 8 parts, centerPos: the center of the segment locates on which degree
                 filewriter.WriteLine("SubjectID TrialNum degree height blockNum centerPos");
-                List<string> permutation = createPermutation(degrees, heights, numtrails);
+                List<string> permutation = createPermutation(degrees, heights, Int32.Parse(this.TrialsUD.Value.ToString()));
                 for(int i=0; i<permutation.Count; i++)
                 {
                     
-                    filewriter.WriteLine(sID + " " + i + " " + permutation[i] + " " + generateCenterPos(permutation[i][permutation[i].Length - 1]));
+                    filewriter.WriteLine(sID + " " + i + " " + permutation[i]);
                 }
                 filewriter.Close();
             }
@@ -148,15 +149,18 @@ namespace AssignmentTwo
             }
         }
 
-        private List<string> createPermutation(List<string> degrees, List<string> heights, int numtrails) {
+        private List<string> createPermutation(List<string> degrees, List<string> heights, int repeat) {
             List<string> result = new List<string>();
             for (int i = 0; i < degrees.Count; i++) {
                 for(int j=0; j < heights.Count; j++)
                 {
                     for (int k = 0; k < 8; k++)
                     {
-                        string tmp = degrees[i]+" "+ heights[j]+" "+k;
-                        result.Add(tmp);
+                        for (int h=0; h< repeat; h++)
+                        {
+                            string tmp = degrees[i] + " " + heights[j] + " " + k +" " + generateCenterPos(this.r,k);
+                            result.Add(tmp);
+                        }
                     }
                 }
             }
@@ -176,12 +180,10 @@ namespace AssignmentTwo
             return result;
         }
 
-        private double generateCenterPos(char blockNum) {
-            int num = blockNum - '0';
-            Random r = new Random();
+        private double generateCenterPos(Random r, int blockNum) {
             int range = 45;
             double rDouble = r.NextDouble() * range;
-            return -22.5 + 45 * num + rDouble;
+            return -22.5 + 45 * blockNum + rDouble;
         }
 
     }
