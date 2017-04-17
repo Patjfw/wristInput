@@ -136,5 +136,10 @@ namespace AssignmentTwo
             this.testDoughnut.SetValue(Canvas.TopProperty, (double)100);
             this.mycanvas.Children.Add(testDoughnut);
         }
+
+        private Boolean isHitted()
+        {
+            return false;
+        }
     }
 }
