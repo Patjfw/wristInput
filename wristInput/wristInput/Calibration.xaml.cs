@@ -62,9 +62,14 @@ namespace AssignmentTwo
         //two edge sensors are close then we pick middle three
         double pickthreethreshold = 50.0;
 
-        public Calibration()
+        int serialNum;
+        string recordFileName;
+
+        public Calibration(int serialNum, string fileName)
         { 
             InitializeComponent();
+            this.serialNum = serialNum;
+            this.recordFileName = fileName;
             arduino_data__buffer = new Queue<string>();
 
             serialport = new SerialPort();
@@ -854,7 +859,7 @@ namespace AssignmentTwo
 
         void finish_Click(object sender, RoutedEventArgs e)
         {
-            HitTest hitTest = new HitTest();
+            HitTest hitTest = new HitTest(this.serialNum, this.recordFileName);
             hitTest.Show();
             this.Close();
         }

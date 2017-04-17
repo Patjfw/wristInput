@@ -11,7 +11,7 @@
 
         <Label x:Name="subjectid" Content="Subject ID:" HorizontalAlignment="Left" Margin="27,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.173,-0.006"/>
         <Label x:Name="trials" Content="Trials per condition:" HorizontalAlignment="Left" Margin="27,85,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Width" Content="Amplitudes: (pixels)&#xA;(1-300)" HorizontalAlignment="Left" Margin="27,124,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Width" Content="Degrees: (pixels)&#xA;(13-360)" HorizontalAlignment="Left" Margin="27,124,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Height" Content="Widths: (pixels)&#xA;(1-50)" HorizontalAlignment="Left" Margin="160,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.742,0.477"/>
         <ListBox x:Name="amplistBox" HorizontalAlignment="Left" Height="165" Margin="27,190,0,0"  VerticalAlignment="Top" Width="113" SelectionChanged="amplistBox_SelectionChanged" />
         <ListBox x:Name="widlistBox" HorizontalAlignment="Left" Height="165" Margin="155,190,0,0"  VerticalAlignment="Top" Width="120" SelectionChanged="widlistBox_SelectionChanged"/>
