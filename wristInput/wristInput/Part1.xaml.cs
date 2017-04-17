@@ -183,7 +183,12 @@ namespace AssignmentTwo
         private double generateCenterPos(Random r, int blockNum) {
             int range = 45;
             double rDouble = r.NextDouble() * range;
-            return -22.5 + 45 * blockNum + rDouble;
+            double angle = -22.5 + 45 * blockNum + rDouble;
+            if (angle < 0)
+            {
+                angle += 360;
+            }
+            return angle;
         }
 
     }

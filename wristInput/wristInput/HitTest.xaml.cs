@@ -186,6 +186,7 @@ namespace AssignmentTwo
             this.mycanvas.Children.Add(testDoughnut);
         }
 
+
 		//update the UI
 		void Display(int[] filteredintensity)
 		{
@@ -578,4 +579,10 @@ namespace AssignmentTwo
 		}
 
 	}
+
+        private Boolean isHitted()
+        {
+            return false;
+        }
+    }
 }
