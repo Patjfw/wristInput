@@ -64,7 +64,7 @@ namespace AssignmentTwo
             tests = readFromRecordFile(this.count);
 
 			serialport = new SerialPort();
-			serialport.PortName = "COM5";
+			serialport.PortName = "COM4";
 			serialport.BaudRate = 9600;
 			serialport.Open(); //uncomment this line to receive data from serialport
 			run_arduino_thread = true;
@@ -106,7 +106,46 @@ namespace AssignmentTwo
 			//data_processing_thread = new Thread(ProcessArduinoData);
 			//data_processing_thread.Start();
 		}
-		void ReadArduino()
+
+        private Boolean isHitted(double startAngle, double stopAngle, double stopPosX, double stopPosY)
+        {
+            Boolean flag = true;
+
+            double angle = calAngle(doughnutscenterleft, doughnutscentertop, stopPosX, stopPosY);
+
+            if (startAngle >= 337.5)
+            {
+                startAngle -= 360;
+            }
+
+            if (angle < startAngle || angle >= stopAngle)
+            {
+                flag = false;
+            }
+
+            double distance = Math.Sqrt(Math.Pow((stopPosX - doughnutscenterleft), 2)+ Math.Pow((stopPosY - doughnutscentertop), 2));
+
+            if (distance < this.testDoughnut.Height / 2 - this.testDoughnut.inner_width)
+            {
+                flag = false;
+            }
+
+            return flag;
+        }
+
+        private double calAngle(double centerX, double centerY, double cursorX, double cursorY)
+        {
+            double diffX = cursorX - centerX;
+            double diffY = cursorY - centerY;
+            double oriAngle = Math.Atan2(diffY, diffX);
+            if (oriAngle < 0)
+            {
+                oriAngle += 180;
+            }
+            return oriAngle;
+        }
+
+        void ReadArduino()
 		{
 			string line;
 			while (run_arduino_thread)
@@ -134,9 +173,15 @@ namespace AssignmentTwo
             }
             else
             {
+                //TODO: cursor position
+                Boolean result = isHitted(this.testDoughnut.start_angle, this.testDoughnut.stop_angle, 100, 100);
+                //TODO: write into file
+
                 btn.Content = "Start";
+
                 this.testCount++;
                 this.mycanvas.Children.Remove(this.testDoughnut);
+                
                 setUpDoughnut(tests[testCount]);
             }
         }
@@ -185,6 +230,7 @@ namespace AssignmentTwo
             this.testDoughnut.SetValue(Canvas.TopProperty, (double)100);
             this.mycanvas.Children.Add(testDoughnut);
         }
+
 
 
 		//update the UI
@@ -566,6 +612,7 @@ namespace AssignmentTwo
 			}
 			return location;
 		}
+
 		void ComputeAngles()
 		{
 			int half = numofDonuts / 2;
@@ -580,9 +627,6 @@ namespace AssignmentTwo
 
 	}
 
-        private Boolean isHitted()
-        {
-            return false;
-        }
-    }
+    
+   
 }
