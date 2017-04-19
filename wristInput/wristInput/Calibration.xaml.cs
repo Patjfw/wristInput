@@ -79,7 +79,7 @@ namespace AssignmentTwo
             arduino_data__buffer = new Queue<string>();
 
             serialport = new SerialPort();
-            serialport.PortName = "COM3";
+            serialport.PortName = "COM5";
             serialport.BaudRate = 9600;
             serialport.Open(); //uncomment this line to receive data from serialport
             run_arduino_thread = true;
@@ -155,7 +155,7 @@ namespace AssignmentTwo
             List<Doughnut> Doughnutlist = new List<Doughnut>();
             for (int i = 1; i <= numofDonuts; i++)
             {
-                Doughnut myDonut = new Doughnut((i - 1) * 360.0 / numofDonuts, i * 360.0 / numofDonuts, 20);
+                Doughnut myDonut = new Doughnut((i - 1) * 360.0 / numofDonuts, i * 360.0 / numofDonuts, 20, true);
                 myDonut.SetValue(Canvas.LeftProperty, (double)150);
                 myDonut.SetValue(Canvas.TopProperty, (double)100);
                 mycanvas.Children.Add(myDonut);

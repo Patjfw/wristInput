@@ -14,14 +14,14 @@ namespace AssignmentTwo
         public double inner_width;
         public double start_angle;
         public double stop_angle;
-
-        public Doughnut(double start_angle, double stop_angle, double inner_width)
+		public bool isCalib;
+        public Doughnut(double start_angle, double stop_angle, double inner_width, bool isCalib)
         {
             // Input two variables
             this.start_angle = start_angle;
             this.stop_angle = stop_angle;
             this.inner_width = inner_width;
-
+			this.isCalib = isCalib;
             // Define some constant parameters
             //inner_width = 40;
             Height = 150;
@@ -47,8 +47,9 @@ namespace AssignmentTwo
                 Point c = new Point(ActualWidth / 2, ActualHeight / 2);
                 double rOutterX = ActualWidth / 2;
                 double rOutterY = ActualHeight / 2;
-                double rInnerX = rOutterX - inner_width;
-                double rInnerY = rOutterY - inner_width;
+				double defautCalibWidth = 20;
+                double rInnerX = rOutterX - defautCalibWidth;
+                double rInnerY = rOutterY - defautCalibWidth;
                 double theta = 0;
                 bool hasBegun = false;
                 double x;
@@ -60,7 +61,7 @@ namespace AssignmentTwo
                 {
                     x = c.X + rOutterX * Math.Cos(GetRadian(theta));
                     y = c.Y + rOutterY * Math.Sin(GetRadian(theta));
-                    currentPoint = new Point(x, y);
+                    currentPoint = new Point(x,y);
                     if (!hasBegun)
                     {
                         context.BeginFigure(currentPoint, true, true);
@@ -78,9 +79,17 @@ namespace AssignmentTwo
                 // Draw the Inner Edge
                 for (theta = stop_angle; theta >= start_angle; theta--)
                 {
-                    x = c.X + rInnerX * Math.Cos(GetRadian(theta));
-                    y = c.Y + rInnerY * Math.Sin(GetRadian(theta));
-                    currentPoint = new Point(x, y);
+					if (!isCalib)
+					{
+						x = c.X + rInnerX * Math.Cos(GetRadian(theta)) - inner_width * Math.Cos(GetRadian(theta));
+						y = c.Y + rInnerY * Math.Sin(GetRadian(theta)) - inner_width * Math.Sin(GetRadian(theta));	
+					}
+					else
+					{
+						x = c.X + rInnerX * Math.Cos(GetRadian(theta));
+						y = c.Y + rInnerY * Math.Sin(GetRadian(theta));
+					}
+					currentPoint = new Point(x, y);
                     context.LineTo(currentPoint, true, true);
                 }
 

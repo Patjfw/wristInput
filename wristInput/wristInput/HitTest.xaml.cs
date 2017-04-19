@@ -212,7 +212,7 @@ namespace AssignmentTwo
             double degree = double.Parse(ShapeParam[0]);
             double height = double.Parse(ShapeParam[1]);
             double centerPos = double.Parse(ShapeParam[3]);
-            this.testDoughnut = new Doughnut(centerPos - degree / 2, centerPos + degree / 2, height);
+            this.testDoughnut = new Doughnut(centerPos - degree / 2, centerPos + degree / 2, height, false);
             this.testDoughnut.SetValue(Canvas.LeftProperty, (double)150);
             this.testDoughnut.SetValue(Canvas.TopProperty, (double)100);
             this.mycanvas.Children.Add(testDoughnut);
