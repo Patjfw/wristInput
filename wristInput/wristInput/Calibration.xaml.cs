@@ -65,15 +65,21 @@ namespace AssignmentTwo
         int serialNum;
         string recordFileName;
 
+        HitTest hitTest;
+
         public Calibration(int serialNum, string fileName)
         { 
             InitializeComponent();
             this.serialNum = serialNum;
             this.recordFileName = fileName;
+
+            hitTest = new HitTest(serialNum, this.recordFileName);
+            hitTest.Show();
+
             arduino_data__buffer = new Queue<string>();
 
             serialport = new SerialPort();
-            //serialport.PortName = "COM3";
+            serialport.PortName = "COM3";
             serialport.BaudRate = 9600;
             serialport.Open(); //uncomment this line to receive data from serialport
             run_arduino_thread = true;
@@ -103,7 +109,7 @@ namespace AssignmentTwo
             finishcalibration.Margin = new Thickness(450, 300, 0, 0);
             finishcalibration.Width = 100;
             finishcalibration.Height = 30;
-            finishcalibration.Content = "Finish";
+            finishcalibration.Content = "Send to Test";
             finishcalibration.Click += finish_Click;
 
             mycanvas.Children.Add(startcalibration);
@@ -457,6 +463,7 @@ namespace AssignmentTwo
                 double skipdistance = ComputeDistance(precoord, location);
                 if (skipdistance > threshold)
                 {
+                    this.hitTest.updateCursorPos(location[0], location[1], true);
                     double top = (precoord[0] + (doughnutscentertop + location[0])) / 2;
                     double left = (precoord[1] + (doughnutscenterleft + location[1])) / 2;
                     cursor.SetValue(Canvas.LeftProperty, left);
@@ -465,7 +472,9 @@ namespace AssignmentTwo
                     precoord[1] = left;
                     //Console.WriteLine("skip");
                 }
-                else {
+                else
+                {
+                    this.hitTest.updateCursorPos(0, 0, false);
                     cursor.SetValue(Canvas.LeftProperty, doughnutscenterleft + location[1]);
                     cursor.SetValue(Canvas.TopProperty, doughnutscentertop + location[0]);
                     precoord[0] = doughnutscentertop + location[0];
@@ -859,9 +868,8 @@ namespace AssignmentTwo
 
         void finish_Click(object sender, RoutedEventArgs e)
         {
-            HitTest hitTest = new HitTest(this.serialNum, this.recordFileName);
-            hitTest.Show();
-            this.Close();
+            //this.hitTest.updateFilter();
+            //this.Close();
         }
 
             void Calibration_Closing(object sender, System.ComponentModel.CancelEventArgs e)
