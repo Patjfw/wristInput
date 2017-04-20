@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Xceed.Wpf.Toolkit;
+using System.Diagnostics;
 
 namespace AssignmentTwo
 {
@@ -48,6 +49,7 @@ namespace AssignmentTwo
         double flagX;
         double flagY;
 		Boolean endFlag;
+        Boolean startFlag = false;
 
         double[] sensorangles = new double[numofDonuts];
 
@@ -61,11 +63,14 @@ namespace AssignmentTwo
         Ellipse cursor = new Ellipse();
         Doughnut testDoughnut;
 
-		string ResultFileName = "testresult_" + DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".txt";
-		StreamWriter filewriter; 
+        string trailsFileName = "trails_" + DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".txt";
+        string resultFileName = "testresult_" + DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".txt";
+		StreamWriter filewriter;
+        StreamWriter trailwriter;
 
+        Stopwatch stopwatch;
 
-		public HitTest(int serialNum, string fileName)
+        public HitTest(int serialNum, string fileName)
         {
             InitializeComponent();
             this.count = serialNum;
@@ -109,8 +114,12 @@ namespace AssignmentTwo
 			//data_processing_thread = new Thread(ProcessArduinoData);
 			//data_processing_thread.Start();
 			//if (!File.Exists(fileName))
-			this.filewriter = File.CreateText(ResultFileName);
-			filewriter.Close();
+			this.filewriter = File.CreateText(resultFileName);
+            filewriter.WriteLine("SubjectID TrialNum degree height blockNum centerPos Success Time");
+            filewriter.Close();
+            this.trailwriter = File.CreateText(trailsFileName);
+            trailwriter.WriteLine("SubjectID TrialNum degree height blockNum centerPos X Y");
+            trailwriter.Close();
 
 		}
 
@@ -120,19 +129,25 @@ namespace AssignmentTwo
 
             double angle = calAngle(doughnutscenterleft, doughnutscentertop, stopPosX, stopPosY);
 
-            if (startAngle >= 337.5)
+            if (stopAngle >= 360)
             {
                 startAngle -= 360;
             }
 
-            if (angle < startAngle || angle >= stopAngle)
+            /*if (stopAngle < startAngle)
+            {
+                if(angle<)
+            }
+            else*/ if (angle < startAngle || angle >= stopAngle)
             {
                 flag = false;
+              
             }
+            
 
             double distance = Math.Sqrt(Math.Pow((stopPosX - doughnutscenterleft), 2)+ Math.Pow((stopPosY - doughnutscentertop), 2));
 
-            if (distance < this.testDoughnut.Height / 2 - this.testDoughnut.inner_width)
+            if (distance < this.testDoughnut.Height / 2 - this.testDoughnut.inner_width - 20)
             {
                 flag = false;
             }
@@ -147,7 +162,17 @@ namespace AssignmentTwo
             double oriAngle = Math.Atan2(diffY, diffX);
             if (oriAngle < 0)
             {
-                oriAngle += 180;
+                //oriAngle += 180;
+                oriAngle = (2 * Math.PI + oriAngle) * 180 / Math.PI;
+            }
+            else
+            {
+                oriAngle = oriAngle * 180 / Math.PI;
+            }
+            oriAngle += 90;
+            if (oriAngle >= 360)
+            {
+                oriAngle -= 360;
             }
             return oriAngle;
         }
@@ -157,19 +182,25 @@ namespace AssignmentTwo
             Button btn = (Button)sender;
             if (btn.Content.Equals("Start"))
             {
+                startFlag = true;
                 btn.Content = "End";
 				endFlag = false;
+                trailwriter = File.AppendText(this.trailsFileName);
+                stopwatch = Stopwatch.StartNew();
             }
             else
             {
-				endFlag = true;
+                stopwatch.Stop();
+                trailwriter.Close();
+                startFlag = false;
+                endFlag = true;
                 //TODO: cursor position
                 Boolean result = isHitted(this.testDoughnut.start_angle, this.testDoughnut.stop_angle, flagX, flagY);
 				//write result into file
 
 				//this.recordFileName = fileName;
-				filewriter = File.AppendText(this.ResultFileName);
-				this.filewriter.WriteLine(tests[testCount] + " " + result);
+				filewriter = File.AppendText(this.resultFileName);
+				this.filewriter.WriteLine(tests[testCount] + " " + result + " " + stopwatch.ElapsedMilliseconds);
 				filewriter.Close();
 				
 				
@@ -186,6 +217,8 @@ namespace AssignmentTwo
                 {
                     System.Windows.MessageBox.Show("Test End");
                 }
+
+                System.Windows.MessageBox.Show(result + " | " + stopwatch.ElapsedMilliseconds + "ms");
             }
         }
 
@@ -259,12 +292,17 @@ namespace AssignmentTwo
                     cursor.SetValue(Canvas.TopProperty, top+ doughnutscentertop);
                     precoord[0] = cursorTop;
                     precoord[1] = cursorLeft;
-					if (endFlag) {
+					//if (endFlag) {
 						flagX = left + doughnutscenterleft;
 						flagY = top + doughnutscentertop;
-					}
+                    //}
+                   
+                    if (startFlag)
+                    {
+                        this.trailwriter.WriteLine(tests[testCount] + " " + flagX + " " + flagY);
+                    }
 
-				}
+                }
                 /*else
                 {
                     cursor.SetValue(Canvas.LeftProperty, doughnutscenterleft + left);
