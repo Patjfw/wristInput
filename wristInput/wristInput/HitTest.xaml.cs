@@ -45,8 +45,9 @@ namespace AssignmentTwo
 		double doughnutscenterleft;
 		double doughnutscentertop;
 
-        double cursorLeft;
-        double cursorTop;
+        double flagX;
+        double flagY;
+		Boolean endFlag;
 
         double[] sensorangles = new double[numofDonuts];
 
@@ -60,7 +61,11 @@ namespace AssignmentTwo
         Ellipse cursor = new Ellipse();
         Doughnut testDoughnut;
 
-        public HitTest(int serialNum, string fileName)
+		string ResultFileName = "testresult_" + DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".txt";
+		StreamWriter filewriter; 
+
+
+		public HitTest(int serialNum, string fileName)
         {
             InitializeComponent();
             this.count = serialNum;
@@ -98,15 +103,18 @@ namespace AssignmentTwo
 
             mycanvas.Children.Add(toggleBtn);
             mycanvas.Children.Add(recalibrationBtn);
-            // Get the data
-            //arduino_thread = new Thread(ReadArduino);
-            //arduino_thread.Start();
-            //data_processing_thread = new Thread(ProcessArduinoData);
-            //data_processing_thread.Start();
-            
+			// Get the data
+			//arduino_thread = new Thread(ReadArduino);
+			//arduino_thread.Start();
+			//data_processing_thread = new Thread(ProcessArduinoData);
+			//data_processing_thread.Start();
+			//if (!File.Exists(fileName))
+			this.filewriter = File.CreateText(ResultFileName);
+			filewriter.Close();
+
 		}
 
-        private Boolean isHitted(double startAngle, double stopAngle, double stopPosX, double stopPosY)
+		private Boolean isHitted(double startAngle, double stopAngle, double stopPosX, double stopPosY)
         {
             Boolean flag = true;
 
@@ -128,7 +136,7 @@ namespace AssignmentTwo
             {
                 flag = false;
             }
-
+			this.endFlag = false;
             return flag;
         }
 
@@ -150,14 +158,22 @@ namespace AssignmentTwo
             if (btn.Content.Equals("Start"))
             {
                 btn.Content = "End";
+				endFlag = false;
             }
             else
             {
+				endFlag = true;
                 //TODO: cursor position
-                Boolean result = isHitted(this.testDoughnut.start_angle, this.testDoughnut.stop_angle, 100, 100);
-                //TODO: write into file
+                Boolean result = isHitted(this.testDoughnut.start_angle, this.testDoughnut.stop_angle, flagX, flagY);
+				//write result into file
 
-                btn.Content = "Start";
+				//this.recordFileName = fileName;
+				filewriter = File.AppendText(this.ResultFileName);
+				this.filewriter.WriteLine(tests[testCount] + " " + result);
+				filewriter.Close();
+				
+				
+				btn.Content = "Start";
 
                 this.testCount++;
                 this.mycanvas.Children.Remove(this.testDoughnut);
@@ -191,9 +207,10 @@ namespace AssignmentTwo
             {
                 //System.Windows.MessageBox.Show(line);
                 if (fileCount >= count+1) {
-                    int secondSpace = line.IndexOf(' ', line.IndexOf(' ') + 1);
-                    result.Add(line.Substring(secondSpace+1));
-                }
+					//int secondSpace = line.IndexOf(' ', line.IndexOf(' ') + 1);
+					//result.Add(line.Substring(secondSpace+1));
+					result.Add(line);
+				}
                 fileCount++;
             }
             
@@ -209,9 +226,9 @@ namespace AssignmentTwo
         private void setUpDoughnut(string param)
         {
             String[] ShapeParam = param.Split(' ');
-            double degree = double.Parse(ShapeParam[0]);
-            double height = double.Parse(ShapeParam[1]);
-            double centerPos = double.Parse(ShapeParam[3]);
+            double degree = double.Parse(ShapeParam[2]);
+            double height = double.Parse(ShapeParam[3]);
+            double centerPos = double.Parse(ShapeParam[5]);
             this.testDoughnut = new Doughnut(centerPos - degree / 2, centerPos + degree / 2, height, false);
             this.testDoughnut.SetValue(Canvas.LeftProperty, (double)150);
             this.testDoughnut.SetValue(Canvas.TopProperty, (double)100);
@@ -242,7 +259,12 @@ namespace AssignmentTwo
                     cursor.SetValue(Canvas.TopProperty, top+ doughnutscentertop);
                     precoord[0] = cursorTop;
                     precoord[1] = cursorLeft;
-                }
+					if (endFlag) {
+						flagX = left + doughnutscenterleft;
+						flagY = top + doughnutscentertop;
+					}
+
+				}
                 /*else
                 {
                     cursor.SetValue(Canvas.LeftProperty, doughnutscenterleft + left);
