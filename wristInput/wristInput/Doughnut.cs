@@ -56,6 +56,11 @@ namespace AssignmentTwo
                 double y;
                 Point currentPoint;
 
+				if (!isCalib)
+				{
+					rOutterX = rOutterX - defautCalibWidth;
+					rOutterY = rOutterY - defautCalibWidth;
+				}
                 // Draw the Outside Edge
                 for (theta = start_angle; theta <= stop_angle; theta++)
                 {
