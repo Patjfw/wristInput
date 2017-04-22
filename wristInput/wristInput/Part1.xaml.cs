@@ -86,7 +86,7 @@ namespace AssignmentTwo
         //update all values
         private void updateall() {
             //update the trials
-            numtrials = Int32.Parse(this.TrialsUD.Value.ToString()) * widlistBox.Items.Count * amplistBox.Items.Count;
+            numtrials = Int32.Parse(this.TrialsUD.Value.ToString()) * widlistBox.Items.Count * amplistBox.Items.Count * 8;
             this.totaltrials.Content = "Total Trials: " + numtrials;
             //update the difficulty
             amplitudelist = amplistBox.Items.OfType<string>().ToList();

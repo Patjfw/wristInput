@@ -115,9 +115,7 @@ namespace AssignmentTwo
             mycanvas.Children.Add(startcalibration);
             mycanvas.Children.Add(stopcalibration);
             mycanvas.Children.Add(recalibration);
-            mycanvas.Children.Add(finishcalibration);
-            
-
+            //mycanvas.Children.Add(finishcalibration);
 
             //Draw the cursor
             cursor.Width = 8;
@@ -474,7 +472,7 @@ namespace AssignmentTwo
                 }
                 else
                 {
-                    this.hitTest.updateCursorPos(0, 0, false);
+                    this.hitTest.updateCursorPos(location[0], location[1], false);
                     cursor.SetValue(Canvas.LeftProperty, doughnutscenterleft + location[1]);
                     cursor.SetValue(Canvas.TopProperty, doughnutscentertop + location[0]);
                     precoord[0] = doughnutscentertop + location[0];

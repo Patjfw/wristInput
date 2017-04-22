@@ -1,21 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
 using System.IO.Ports;
 using System.Threading;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Xceed.Wpf.Toolkit;
 using System.Diagnostics;
 
 namespace AssignmentTwo
@@ -30,6 +22,7 @@ namespace AssignmentTwo
 		bool run_arduino_thread;
 		Queue<string> arduino_data__buffer;
 
+        const int radius = 40;
 		const int numofDonuts = 12;
 		int count;
         string fileName;
@@ -59,6 +52,12 @@ namespace AssignmentTwo
         Canvas mycanvas = new Canvas();
         Button toggleBtn = new Button();
         Button recalibrationBtn = new Button();
+
+        Label state = new Label();
+        Label remainTest = new Label();
+        Label currentTest = new Label();
+        Label timeUsed = new Label();
+        Label successLabel = new Label();
 
         Ellipse cursor = new Ellipse();
         Doughnut testDoughnut;
@@ -90,8 +89,48 @@ namespace AssignmentTwo
             recalibrationBtn.Content = "ReCalibration";
             recalibrationBtn.Click += recalibration;
 
+            state.Margin = new Thickness(450, 100, 0, 0);
+            state.Width = 100;
+            state.Height = 40;
+            state.Content = "Status: Idle";
+
+            currentTest.Margin = new Thickness(450, 140, 0, 0);
+            currentTest.Width = 100;
+            currentTest.Height = 40;
+            currentTest.Content = "Current Test: "+serialNum;
+
+            remainTest.Margin = new Thickness(450, 180, 0, 0);
+            remainTest.Width = 100;
+            remainTest.Height = 40;
+            remainTest.Content = "Remain Test: "+ (tests.Count-testCount-serialNum);
+
+            successLabel.Margin = new Thickness(450, 220, 0, 0);
+            successLabel.Width = 100;
+            successLabel.Height = 40;
+            successLabel.Content = "Success: Null";
+
+            timeUsed.Margin = new Thickness(450, 260, 0, 0);
+            timeUsed.Width = 140;
+            timeUsed.Height = 40;
+            timeUsed.Content = "Time Used: Null";
+
+            
+
+            mycanvas.Children.Add(state);
+            mycanvas.Children.Add(currentTest);
+            mycanvas.Children.Add(remainTest);
+            mycanvas.Children.Add(successLabel);
+            mycanvas.Children.Add(timeUsed);
+
             //testDoughnut = new Doughnut(tests[testCount])
             setUpDoughnut(tests[testCount]);
+
+            Ellipse circle = new Ellipse();
+            circle.Stroke = System.Windows.Media.Brushes.Red;
+            circle.Margin = new Thickness(150 - radius/2 + testDoughnut.Width / 2, 100 - radius/2 + testDoughnut.Height / 2,0,0);
+            circle.Width = radius;
+            circle.Height = radius;
+            mycanvas.Children.Add(circle);
 
             //Draw the cursor
             cursor.Width = 8;
@@ -106,9 +145,10 @@ namespace AssignmentTwo
             mycanvas.Children.Add(cursor);
             ComputeAngles();
 
-            mycanvas.Children.Add(toggleBtn);
-            mycanvas.Children.Add(recalibrationBtn);
-			// Get the data
+            //mycanvas.Children.Add(toggleBtn);
+            //mycanvas.Children.Add(recalibrationBtn);
+			
+            // Get the data
 			//arduino_thread = new Thread(ReadArduino);
 			//arduino_thread.Start();
 			//data_processing_thread = new Thread(ProcessArduinoData);
@@ -180,46 +220,7 @@ namespace AssignmentTwo
 		private void toggleTest(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-            if (btn.Content.Equals("Start"))
-            {
-                startFlag = true;
-                btn.Content = "End";
-				endFlag = false;
-                trailwriter = File.AppendText(this.trailsFileName);
-                stopwatch = Stopwatch.StartNew();
-            }
-            else
-            {
-                stopwatch.Stop();
-                trailwriter.Close();
-                startFlag = false;
-                endFlag = true;
-                //TODO: cursor position
-                Boolean result = isHitted(this.testDoughnut.start_angle, this.testDoughnut.stop_angle, flagX, flagY);
-				//write result into file
-
-				//this.recordFileName = fileName;
-				filewriter = File.AppendText(this.resultFileName);
-				this.filewriter.WriteLine(tests[testCount] + " " + result + " " + stopwatch.ElapsedMilliseconds);
-				filewriter.Close();
-				
-				
-				btn.Content = "Start";
-
-                this.testCount++;
-                this.mycanvas.Children.Remove(this.testDoughnut);
-
-                if (testCount < tests.Count)
-                {
-                    setUpDoughnut(tests[testCount]);
-                }
-                else
-                {
-                    System.Windows.MessageBox.Show("Test End");
-                }
-
-                System.Windows.MessageBox.Show(result + " | " + stopwatch.ElapsedMilliseconds + "ms");
-            }
+            
         }
 
         private void recalibration(object sender, RoutedEventArgs e)
@@ -280,6 +281,60 @@ namespace AssignmentTwo
 			}
 		}
 
+        private void Window_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (state.Content.Equals("Status: Idle"))
+            {
+                if (Math.Abs(flagX - (150 + testDoughnut.Width/2))<=radius && Math.Abs(flagY - (100 + testDoughnut.Height/2))<=radius) {
+                    startFlag = true;
+                    state.Content = "Status: Running";
+                    endFlag = false;
+                    trailwriter = File.AppendText(this.trailsFileName);
+                    stopwatch = Stopwatch.StartNew();
+                }
+                else
+                {
+                    MessageBox.Show("Please place cursor in the red circle");
+                }
+            }
+            else
+            {
+                stopwatch.Stop();
+                trailwriter.Close();
+                startFlag = false;
+                endFlag = true;
+                //TODO: cursor position
+                Boolean result = isHitted(this.testDoughnut.start_angle, this.testDoughnut.stop_angle, flagX, flagY);
+                //write result into file
+
+                //this.recordFileName = fileName;
+                filewriter = File.AppendText(this.resultFileName);
+                this.filewriter.WriteLine(tests[testCount] + " " + result + " " + stopwatch.ElapsedMilliseconds);
+                filewriter.Close();
+
+                this.testCount++;
+                this.mycanvas.Children.Remove(this.testDoughnut);
+
+                if (testCount < tests.Count)
+                {
+                    setUpDoughnut(tests[testCount]);
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show("Test End");
+                }
+
+                //System.Windows.MessageBox.Show(result + " | " + stopwatch.ElapsedMilliseconds + "ms");
+
+                currentTest.Content = "Current Test: " + count;
+                remainTest.Content = "Remain Test: " + (tests.Count - testCount - count);
+                state.Content = "Status: Idle";
+
+                successLabel.Content = "Success: " + result;
+                timeUsed.Content = "Time Used: " + stopwatch.ElapsedMilliseconds + "ms";
+            }
+        }
+
         public void updateCursorPos(double top, double left, Boolean isSkipdistance)
         {
             Dispatcher.BeginInvoke((Action)(() =>
@@ -292,10 +347,10 @@ namespace AssignmentTwo
                     cursor.SetValue(Canvas.TopProperty, top+ doughnutscentertop);
                     precoord[0] = cursorTop;
                     precoord[1] = cursorLeft;
-					//if (endFlag) {
-						flagX = left + doughnutscenterleft;
-						flagY = top + doughnutscentertop;
-                    //}
+					
+					flagX = left + doughnutscenterleft;
+					flagY = top + doughnutscentertop;
+                    
                    
                     if (startFlag)
                     {
@@ -303,13 +358,23 @@ namespace AssignmentTwo
                     }
 
                 }
-                /*else
+                else
                 {
                     cursor.SetValue(Canvas.LeftProperty, doughnutscenterleft + left);
                     cursor.SetValue(Canvas.TopProperty, doughnutscentertop + top);
                     precoord[0] = doughnutscentertop + top;
                     precoord[1] = doughnutscenterleft + left;
-                }*/
+
+                    flagX = left + doughnutscenterleft;
+                    flagY = top + doughnutscentertop;
+
+
+                    if (startFlag)
+                    {
+                        this.trailwriter.WriteLine(tests[testCount] + " " + flagX + " " + flagY);
+                    }
+
+                }
             }));
         }
     }
