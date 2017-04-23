@@ -461,20 +461,21 @@ namespace AssignmentTwo
                 double skipdistance = ComputeDistance(precoord, location);
                 if (skipdistance > threshold)
                 {
-                    this.hitTest.updateCursorPos(location[0], location[1], true);
+                    
                     double top = (precoord[0] + (doughnutscentertop + location[0])) / 2;
                     double left = (precoord[1] + (doughnutscenterleft + location[1])) / 2;
                     cursor.SetValue(Canvas.LeftProperty, left);
                     cursor.SetValue(Canvas.TopProperty, top);
+                    this.hitTest.updateCursorPos(top, left);
                     precoord[0] = top;
                     precoord[1] = left;
                     //Console.WriteLine("skip");
                 }
                 else
                 {
-                    this.hitTest.updateCursorPos(location[0], location[1], false);
-                    cursor.SetValue(Canvas.LeftProperty, doughnutscenterleft + location[1]);
                     cursor.SetValue(Canvas.TopProperty, doughnutscentertop + location[0]);
+                    cursor.SetValue(Canvas.LeftProperty, doughnutscenterleft + location[1]);
+                    this.hitTest.updateCursorPos(doughnutscentertop + location[0], doughnutscenterleft + location[1]);
                     precoord[0] = doughnutscentertop + location[0];
                     precoord[1] = doughnutscenterleft + location[1];
                 }

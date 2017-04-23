@@ -72,6 +72,9 @@
     <Compile Include="UserStudy.xaml.cs">
       <DependentUpon>UserStudy.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReadFile.xaml.cs">
+      <DependentUpon>ReadFile.xaml</DependentUpon>
+    </Compile>
     <Page Include="Calibration.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -101,6 +104,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserStudy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReadFile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

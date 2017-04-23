@@ -125,6 +125,13 @@ namespace AssignmentTwo
             this.Close();
         }
 
+        private void readFile_Click(object sender, RoutedEventArgs e)
+        {
+            ReadFile readfile = new ReadFile();
+            readfile.Show();
+            this.Close();
+        }
+
         private void writeTestFile(List<string> degrees, List<string> heights, int numtrails, int tID, int sID)
         {
             string fileName = "testrecord_" + DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".txt";
@@ -138,7 +145,6 @@ namespace AssignmentTwo
                 List<string> permutation = createPermutation(degrees, heights, Int32.Parse(this.TrialsUD.Value.ToString()));
                 for(int i=0; i<permutation.Count; i++)
                 {
-                    
                     filewriter.WriteLine(sID + " " + i + " " + permutation[i]);
                 }
                 filewriter.Close();

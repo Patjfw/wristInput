@@ -22,7 +22,7 @@ namespace AssignmentTwo
 		bool run_arduino_thread;
 		Queue<string> arduino_data__buffer;
 
-        const int radius = 40;
+        const int radius = 20;
 		const int numofDonuts = 12;
 		int count;
         string fileName;
@@ -102,7 +102,14 @@ namespace AssignmentTwo
             remainTest.Margin = new Thickness(450, 180, 0, 0);
             remainTest.Width = 100;
             remainTest.Height = 40;
-            remainTest.Content = "Remain Test: "+ (tests.Count-testCount-serialNum);
+            if (serialNum > 0)
+            {
+                remainTest.Content = "Remain Test: " + (tests.Count);
+            }
+            else
+            {
+                remainTest.Content = "Remain Test: " + (tests.Count - testCount - serialNum);
+            }
 
             successLabel.Margin = new Thickness(450, 220, 0, 0);
             successLabel.Width = 100;
@@ -127,9 +134,9 @@ namespace AssignmentTwo
 
             Ellipse circle = new Ellipse();
             circle.Stroke = System.Windows.Media.Brushes.Red;
-            circle.Margin = new Thickness(150 - radius/2 + testDoughnut.Width / 2, 100 - radius/2 + testDoughnut.Height / 2,0,0);
-            circle.Width = radius;
-            circle.Height = radius;
+            circle.Margin = new Thickness(150 - radius + testDoughnut.Width / 2, 100 - radius + testDoughnut.Height / 2,0,0);
+            circle.Width = radius*2;
+            circle.Height = radius*2;
             mycanvas.Children.Add(circle);
 
             //Draw the cursor
@@ -285,7 +292,7 @@ namespace AssignmentTwo
         {
             if (state.Content.Equals("Status: Idle"))
             {
-                if (Math.Abs(flagX - (150 + testDoughnut.Width/2))<=radius && Math.Abs(flagY - (100 + testDoughnut.Height/2))<=radius) {
+                if (Math.Pow(Math.Abs(flagX - (150 + testDoughnut.Width / 2)+cursor.Width/2),2) + Math.Pow(Math.Abs(flagY - (100 + testDoughnut.Height / 2)+cursor.Height/2),2)<=radius*radius) {
                     startFlag = true;
                     state.Content = "Status: Running";
                     endFlag = false;
@@ -326,8 +333,22 @@ namespace AssignmentTwo
 
                 //System.Windows.MessageBox.Show(result + " | " + stopwatch.ElapsedMilliseconds + "ms");
 
-                currentTest.Content = "Current Test: " + count;
-                remainTest.Content = "Remain Test: " + (tests.Count - testCount - count);
+                if (this.count > 0) {
+                    currentTest.Content = "Current Test: " + (count + testCount);
+                }
+                else
+                {
+                    currentTest.Content = "Current Test: " + testCount;
+                }
+                
+                if (this.count > 0)
+                {
+                    remainTest.Content = "Remain Test: " + (tests.Count - testCount);
+                }
+                else
+                {
+                    remainTest.Content = "Remain Test: " + (tests.Count - testCount - count);
+                }
                 state.Content = "Status: Idle";
 
                 successLabel.Content = "Success: " + result;
@@ -335,45 +356,19 @@ namespace AssignmentTwo
             }
         }
 
-        public void updateCursorPos(double top, double left, Boolean isSkipdistance)
+        public void updateCursorPos(double top, double left)
         {
             Dispatcher.BeginInvoke((Action)(() =>
             {
-                if (isSkipdistance)
-                {
-                    double cursorTop = (precoord[0] + (doughnutscentertop + top)) / 2;
-                    double cursorLeft = (precoord[1] + (doughnutscenterleft + left)) / 2;
-                    cursor.SetValue(Canvas.LeftProperty, left+ doughnutscenterleft);
-                    cursor.SetValue(Canvas.TopProperty, top+ doughnutscentertop);
-                    precoord[0] = cursorTop;
-                    precoord[1] = cursorLeft;
-					
-					flagX = left + doughnutscenterleft;
-					flagY = top + doughnutscentertop;
+                cursor.SetValue(Canvas.LeftProperty, left);
+                cursor.SetValue(Canvas.TopProperty, top);
+
+                flagX = left;
+				flagY = top;
                     
-                   
-                    if (startFlag)
-                    {
-                        this.trailwriter.WriteLine(tests[testCount] + " " + flagX + " " + flagY);
-                    }
-
-                }
-                else
+                if (startFlag)
                 {
-                    cursor.SetValue(Canvas.LeftProperty, doughnutscenterleft + left);
-                    cursor.SetValue(Canvas.TopProperty, doughnutscentertop + top);
-                    precoord[0] = doughnutscentertop + top;
-                    precoord[1] = doughnutscenterleft + left;
-
-                    flagX = left + doughnutscenterleft;
-                    flagY = top + doughnutscentertop;
-
-
-                    if (startFlag)
-                    {
-                        this.trailwriter.WriteLine(tests[testCount] + " " + flagX + " " + flagY);
-                    }
-
+                    this.trailwriter.WriteLine(tests[testCount] + " " + flagX + " " + flagY);
                 }
             }));
         }

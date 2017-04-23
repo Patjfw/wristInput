@@ -18,6 +18,7 @@
         <Label x:Name="totaltrials" Content="Total Trials: 0" HorizontalAlignment="Left" Margin="27,363,0,0" VerticalAlignment="Top"/>
         <Button x:Name="okbutton" Content="Ok" HorizontalAlignment="Left" Margin="200,377,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.344,0.737" Click="okbutton_Click"/>
         <Button x:Name="cancelbutton" Content="Cancel" HorizontalAlignment="Left" Margin="293,377,0,0" VerticalAlignment="Top" Width="75" Click="cancelbutton_Click"/>
+        <Button x:Name="readbutton" Content="ReadFile" HorizontalAlignment="Left" Margin="293,100,0,0" VerticalAlignment="Top" Width="75" Click="readFile_Click"/>
         <xctk:IntegerUpDown x:Name="TrialsUD" Value="1" Increment="1" Maximum="100000" Minimum="1" Margin="154,89,215.333,366.334" ValueChanged="TrialsUD_ValueChanged" />
         <xctk:IntegerUpDown x:Name="AmplitudesUD" Value="150" Increment="1" Maximum="300" Minimum="1" Margin="32,166,339.333,289.334" />
         <xctk:IntegerUpDown x:Name="WidthsUD" Value = "10" Maximum="50" Minimum="1" Margin="160,166,211.333,289.334" />
