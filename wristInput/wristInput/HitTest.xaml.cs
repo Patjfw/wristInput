@@ -60,6 +60,7 @@ namespace AssignmentTwo
         Label successLabel = new Label();
 
         Ellipse cursor = new Ellipse();
+        Ellipse boundary = new Ellipse();
         Doughnut testDoughnut;
 
         string trailsFileName = "trails_" + DateTime.Now.ToString("yyyyMMddHHmmssffff") + ".txt";
@@ -131,6 +132,7 @@ namespace AssignmentTwo
 
             //testDoughnut = new Doughnut(tests[testCount])
             setUpDoughnut(tests[testCount]);
+            setUpBoundary(tests[testCount]);
 
             Ellipse circle = new Ellipse();
             circle.Stroke = System.Windows.Media.Brushes.Red;
@@ -276,6 +278,18 @@ namespace AssignmentTwo
             this.mycanvas.Children.Add(testDoughnut);
         }
 
+        private void setUpBoundary(string param) {
+            String[] ShapeParam = param.Split(' ');
+            double height = double.Parse(ShapeParam[3]);
+            double centerPos = double.Parse(ShapeParam[5]);
+            this.boundary = new Ellipse();
+            boundary.Stroke = System.Windows.Media.Brushes.Red;
+            boundary.Margin = new Thickness(150 + height +20, 100 + height +20, 0, 0);
+            boundary.Width = testDoughnut.Width - height*2-20*2;
+            boundary.Height = testDoughnut.Height - height*2-20*2;
+            mycanvas.Children.Add(boundary);
+        }
+
 		void ComputeAngles()
 		{
 			int half = numofDonuts / 2;
@@ -304,7 +318,7 @@ namespace AssignmentTwo
                     MessageBox.Show("Please place cursor in the red circle");
                 }
             }
-            else
+            /*else
             {
                 stopwatch.Stop();
                 trailwriter.Close();
@@ -320,11 +334,13 @@ namespace AssignmentTwo
                 filewriter.Close();
 
                 this.testCount++;
+                this.mycanvas.Children.Remove(this.boundary);
                 this.mycanvas.Children.Remove(this.testDoughnut);
 
                 if (testCount < tests.Count)
                 {
                     setUpDoughnut(tests[testCount]);
+                    setUpBoundary(tests[testCount]);
                 }
                 else
                 {
@@ -353,7 +369,60 @@ namespace AssignmentTwo
 
                 successLabel.Content = "Success: " + result;
                 timeUsed.Content = "Time Used: " + stopwatch.ElapsedMilliseconds + "ms";
+            }*/
+        }
+
+        private void endOneTest() {
+            stopwatch.Stop();
+            trailwriter.Close();
+            startFlag = false;
+            endFlag = true;
+            //TODO: cursor position
+            Boolean result = isHitted(this.testDoughnut.start_angle, this.testDoughnut.stop_angle, flagX, flagY);
+            //write result into file
+
+            //this.recordFileName = fileName;
+            filewriter = File.AppendText(this.resultFileName);
+            this.filewriter.WriteLine(tests[testCount] + " " + result + " " + stopwatch.ElapsedMilliseconds);
+            filewriter.Close();
+
+            this.testCount++;
+            this.mycanvas.Children.Remove(this.boundary);
+            this.mycanvas.Children.Remove(this.testDoughnut);
+
+            if (testCount < tests.Count)
+            {
+                setUpDoughnut(tests[testCount]);
+                setUpBoundary(tests[testCount]);
             }
+            else
+            {
+                System.Windows.MessageBox.Show("Test End");
+            }
+
+            //System.Windows.MessageBox.Show(result + " | " + stopwatch.ElapsedMilliseconds + "ms");
+
+            if (this.count > 0)
+            {
+                currentTest.Content = "Current Test: " + (count + testCount);
+            }
+            else
+            {
+                currentTest.Content = "Current Test: " + testCount;
+            }
+
+            if (this.count > 0)
+            {
+                remainTest.Content = "Remain Test: " + (tests.Count - testCount);
+            }
+            else
+            {
+                remainTest.Content = "Remain Test: " + (tests.Count - testCount - count);
+            }
+            state.Content = "Status: Idle";
+
+            successLabel.Content = "Success: " + result;
+            timeUsed.Content = "Time Used: " + stopwatch.ElapsedMilliseconds + "ms";
         }
 
         public void updateCursorPos(double top, double left)
@@ -369,7 +438,16 @@ namespace AssignmentTwo
                 if (startFlag)
                 {
                     this.trailwriter.WriteLine(tests[testCount] + " " + flagX + " " + flagY);
+                    double distance = Math.Sqrt(Math.Pow((flagX - doughnutscenterleft), 2) + Math.Pow((flagY - doughnutscentertop), 2));
+
+                    if (distance >= this.testDoughnut.Height / 2 - this.testDoughnut.inner_width - 20)
+                    {
+                        endOneTest();
+                        //Boolean result = isHitted(this.testDoughnut.start_angle, this.testDoughnut.stop_angle, flagX, flagY);
+                    }
                 }
+
+                
             }));
         }
     }
