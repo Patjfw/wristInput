@@ -111,9 +111,17 @@ namespace AssignmentTwo
         //ok button
         private void okbutton_Click(object sender, RoutedEventArgs e)
         {
-            //UserStudy userstudy = new UserStudy(this.amplitudelist,this.widlist,this.numtrials, Int32.Parse(this.TrialsUD.Value.ToString()), Int32.Parse(this.SubjectUD.Value.ToString()));
-            //userstudy.Show();
-            writeTestFile(this.amplitudelist, this.widlist, this.numtrials, Int32.Parse(this.TrialsUD.Value.ToString()), Int32.Parse(this.SubjectUD.Value.ToString()));
+			//UserStudy userstudy = new UserStudy(this.amplitudelist,this.widlist,this.numtrials, Int32.Parse(this.TrialsUD.Value.ToString()), Int32.Parse(this.SubjectUD.Value.ToString()));
+			//userstudy.Show();
+			this.amplitudelist = new List<string>();
+			amplitudelist.Add("27.70");
+			amplitudelist.Add("41.53");
+			amplitudelist.Add("55.38");
+			amplitudelist.Add("69.23");
+			amplitudelist.Add("83.07");
+
+
+			writeTestFile(this.amplitudelist, this.widlist, this.numtrials, Int32.Parse(this.TrialsUD.Value.ToString()), Int32.Parse(this.SubjectUD.Value.ToString()));
             Calibration calibration = new Calibration(0, this.recordFileName);
             calibration.Show();
             this.Close();
